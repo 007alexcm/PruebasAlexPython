@@ -1,6 +1,6 @@
 from Portero import Portero
 class Equipo:
-    MAX = 3
+    MAX = 4
 
     def __init__(self, nombre: str, plantilla: list):
         self._nombre = nombre
@@ -61,5 +61,24 @@ class Equipo:
         sanos = list(filter(lambda jug: not jug.lesion, self.plantilla))
         sanos.sort(key=lambda jug: jug.dorsal)
         
-        return Equipo(f"Alineación de {self.nombre}:", sanos[:Equipo.MAX])
+        return Equipo(self.nombre, sanos[:Equipo.MAX])
+    
+    def busca_jugador(self, nombre):
+        for j in self.plantilla:
+            if j.nombre == nombre:
+                return True
+        return False
         
+    def felicitacion_disculpa(self, jugador):
+        if jugador in self.plantilla:
+            print(f"Felicidades, {jugador.nombre} ha sido convocado con {self.nombre}")
+        else:
+            print(f"Lo sentimos, {jugador.nombre} NO ha sido convocado con {self.nombre}")
+
+    def felicitacion_disculpa_n(self, nombre):
+        if self.busca_jugador(nombre):
+            print(f"Felicidades, {nombre} ha sido convocado con {self.nombre}")
+        else:
+            print(f"Lo sentimos, {nombre} NO ha sido convocado con {self.nombre}")
+
+            

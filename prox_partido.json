@@ -1,0 +1,22 @@
+[
+    {
+        "nombre": "Casillas",
+        "dorsal": 1,
+        "lesion": false
+    },
+    {
+        "nombre": "Carvajal",
+        "dorsal": 2,
+        "lesion": false
+    },
+    {
+        "nombre": "Alex",
+        "dorsal": 7,
+        "lesion": false
+    },
+    {
+        "nombre": "Iniesta",
+        "dorsal": 8,
+        "lesion": false
+    }
+]

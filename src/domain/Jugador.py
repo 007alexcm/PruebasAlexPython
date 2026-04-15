@@ -13,6 +13,13 @@ class Jugador:
     def __str__(self):
         return f"Jugador: {self.nombre}, dorsal = {self.dorsal}, lesion = {self.lesion}"
     
+    def to_dict(self):   #Convertidor a diccionario
+        return {
+            "nombre": self.nombre,
+            "dorsal": self.dorsal,
+            "lesion": self.lesion
+        }
+
     @staticmethod
     def jugadores_registrados():
         return Jugador.contador_jugadores
